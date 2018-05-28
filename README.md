@@ -1,2 +1,1 @@
-# dotconfig
-Config files
+# Configuration file

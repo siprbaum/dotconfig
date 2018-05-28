@@ -1,0 +1,64 @@
+[core]
+	autocrlf = false
+
+[alias]
+	k = !start gitk HEAD $(git for-each-ref HEAD refs/remotes refs/heads refs/tags --format='"%(refname)"')
+	g = !start git-gui "$@"
+	cfg = !start gvim $(git rev-parse --git-dir)/config
+
+[diff]
+	#compactionHeuristic = true
+	indentHeuristics = true
+	guitool = kdiff3
+
+[merge]
+	renamelimit = 1000000
+
+[tag]
+	sort = version:refname
+
+[versionsort]
+	# order matters here, as it defines the order of the suffixes
+	suffix =  -rc
+	suffix = ""
+
+[http]
+	proxy = 194.145.60.1:9400
+
+[branch]
+	autosetuprebase = always
+
+[rerere]
+	enabled = true
+
+[merge]
+	tool = kdiff3
+
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+
+
+[guitool "GVim"]
+	cmd = gvim \"${FILENAME}\"
+	needsfile = yes
+	noconsole = yes
+
+[guitool "notepad++"]
+	cmd = notepad++ -multiInst -nosession \"${FILENAME}\"
+	needsfile = yes
+	noconsole = yes
+
+
+[guitool "gitk --all <file>"]
+	cmd = gitk --all -- \"${FILENAME}\"
+	needsfile = yes
+	noconsole = yes
+
+[guitool "Delete File"]
+	cmd = rm \"${FILENAME}\"
+	noconsole = yes
+	needsfile = yes
+

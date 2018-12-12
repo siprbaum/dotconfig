@@ -26,6 +26,11 @@
 	renamelimit = 1000000
 	tool = kdiff3
 
+[git-tfs]
+	# gitignore support causes problems, because ignored files are then
+	# no longer imported. see https://github.com/git-tfs/git-tfs/issues/1209
+	disable-gitingore-support = true
+
 [tag]
 	# Sort the tags better, especially with the [versionsort] section below
 	# ensures that a -rc is sorted before the actual release version if we

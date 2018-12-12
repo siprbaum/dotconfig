@@ -8,6 +8,8 @@
 
 [diff]
 	#compactionHeuristic = true
+	mnemonicPrefix = true
+	interHunkContext = 5
 	indentHeuristics = true
 	guitool = kdiff3
 

@@ -11,8 +11,15 @@
 	indentHeuristics = true
 	guitool = kdiff3
 
+[branch]
+	autosetuprebase = remote
+
+[rerere]
+	enabled = true
+
 [merge]
 	renamelimit = 1000000
+	tool = kdiff3
 
 [tag]
 	sort = version:refname
@@ -24,15 +31,6 @@
 
 [http]
 	proxy = 194.145.60.1:9400
-
-[branch]
-	autosetuprebase = always
-
-[rerere]
-	enabled = true
-
-[merge]
-	tool = kdiff3
 
 [difftool "kdiff3"]
 	path = C:/Program Files/KDiff3/kdiff3.exe

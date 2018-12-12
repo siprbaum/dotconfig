@@ -16,6 +16,9 @@
 [branch]
 	autosetuprebase = remote
 
+[log]
+	decorate = auto
+
 [rerere]
 	enabled = true
 
